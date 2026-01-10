@@ -1,0 +1,52 @@
+{
+    "1": {
+        "name": "Rahul",
+        "courses": ["Python", "SQL"],
+        "marks": [90, 95]
+    },
+    "2": {
+        "name": "Darshan",
+        "courses": ["Django", "SQL"],
+        "marks": [95, 65]
+    },
+    "3": {
+        "name": "Varsh",
+        "courses": ["Python", "Django", "SQL"],
+        "marks": [88, 82, 91]
+    },
+    "4": {
+        "name": "Amit",
+        "courses": ["Java", "SQL"],
+        "marks": [78, 85]
+    },
+    "5": {
+        "name": "Sneha",
+        "courses": ["Python", "Data Science"],
+        "marks": [92, 89]
+    },
+    "6": {
+        "name": "Rohit",
+        "courses": ["C", "Python"],
+        "marks": [70, 80]
+    },
+    "7": {
+        "name": "Kiran",
+        "courses": ["Django", "Python"],
+        "marks": [85, 90]
+    },
+    "8": {
+        "name": "Anjali",
+        "courses": ["SQL", "Power BI"],
+        "marks": [88, 76]
+    },
+    "9": {
+        "name": "Suresh",
+        "courses": ["Java", "Spring"],
+        "marks": [73, 81]
+    },
+    "10": {
+        "name": "Meena",
+        "courses": ["Python", "Machine Learning"],
+        "marks": [94, 87]
+    }
+}
