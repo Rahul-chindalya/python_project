@@ -26,7 +26,7 @@ class LibrarySystem:
             return{}
         
     def __save(self,filename,data):
-        with open(filename,data) as file:
+        with open(filename,"w") as file:
             json.dump(file,data,indent=4)
 
 #----------------About Books--------------#
@@ -81,7 +81,7 @@ class LibrarySystem:
             return "NO USER AVAILABLE"
         else:
             data=self.__users[uid]
-            return f"uid:{uid},Name:{data["name"]},Department:{data["department"]}"
+            return f"uid:{uid},Name:{data['name']},Department:{data['department']}"
         
     def view_users(self):
         for uid,data in self.__users.items():
@@ -108,11 +108,12 @@ class LibrarySystem:
         data= self.__books
         if issued_count>= data[bid]["copies"]:
             return "No copies available"
-        # if the book is available 
+        # if the book is available
+        # JSON cannot store date objects → must convert to string.
         else:
             self.__issued[bid]={
                 "user_id": uid,
-                "issue_date": datetime.today().date()
+                "issue_date": str(datetime.today().date())
             }
             self.__save(self.__issued_file,self.__issued)
             return"Book issued!!!"
@@ -123,7 +124,7 @@ class LibrarySystem:
             return"Book Not Issued"
         # checks the book and user in isssued data to confirm if
         #the user not taken this book throws error
-        if self.__issued[bid]!=uid:
+        if self.__issued[bid]["user_id"]!=uid:
             return "This user has not taken this book"
         
         del self.__issued[bid]
@@ -133,7 +134,7 @@ class LibrarySystem:
     def my_books(self,uid):
         found = False
         ## Check the used id in issued_ data and if available in list printing the book details
-        for uid,data in self.__issued.items():
+        for bid,data in self.__issued.items():
             if data["userd_id"]== uid:
                 print(
                     bid,
@@ -153,6 +154,6 @@ class LibrarySystem:
                 print("Book Id: ",bid)
                 print("Title:" ,self.__books[bid]["title"])
                 print("Author",self.__books[bid]["author"])
-                print("Issued To:",self.__users[uid],["name"])
+                print("Issued To:",self.__users[uid]["name"])
                 print("Issued on: ",data["issue_date"])
                 print("="*40)
