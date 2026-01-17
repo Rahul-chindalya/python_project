@@ -4,14 +4,15 @@ import library
 def admin_menu():
     while True:
         print("-----Admin Menu-----")
-        print("1-Add Book")
-        print("2-View Book")
-        print("3-Register user")
-        print("4-View Users")
-        print("5-Issue Books")
-        print("6-Return Book")
-        print("7-Issued Books Report")
-        print("8-Logout")
+        print("1-Add Book")###
+        print("2-View Book")###
+        print("3-Register user")##
+        print("4-View User")##
+        print("5-View Users")##
+        print("6-Issued Books")
+        print("7-Return Book")#
+        print("8-Issued Books Report")
+        print("9-Logout")#
 
         admin_no = input("Enter Choice: ")
 
@@ -30,6 +31,8 @@ def admin_menu():
         elif admin_no == "7":
             pass
         elif admin_no == "8":
+            pass
+        elif admin_no == "9":
             break
         else:
             print("Plese Enter Choice Between (1-8)")
@@ -38,13 +41,13 @@ def admin_menu():
 def student_menu():
     while True:
         print("-----Student Menu-----")
-        print("1-View Available Books")
-        print("2-Borrow Book")
-        print("3-Return Book")
+        print("1-View Available Books")#####
+        print("2-Borrow Book")#
+        print("3-Return Book")#
         print("4-My Books")
-        print("5-Logout")
+        print("5-Logout")#
         
-        std_choice= input("ENTER Choice: ")
+        std_choice= input("ENTER Choice: ")   
         if std_choice =="1":
             pass
         elif std_choice =="2":
