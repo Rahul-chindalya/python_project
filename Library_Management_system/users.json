@@ -1,34 +1,42 @@
 {
-  "U101": {
-    "name": "Varsh",
-    "department": "B.Com CA"
+    "U101": {
+        "name": "Varsh",
+        "department": "B.Com CA"
+    },
+    "U102": {
+        "name": "Rahul",
+        "department": "B.Sc IT"
+    },
+    "U103": {
+        "name": "Anita",
+        "department": "BBA"
   },
-  "U102": {
-    "name": "Rahul",
-    "department": "B.Sc IT"
-  },
-  "U103": {
-    "name": "Anita",
-    "department": "BBA"
-  },
-  "U104": {
-    "name": "Suresh",
-    "department": "B.Com"
-  },
-  "U105": {
-    "name": "Pooja",
-    "department": "B.Sc Computer Science"
-  },
-  "U106": {
-    "name": "Ravi",
-    "department": "BCA"
-  },
-  "U107": {
-    "name": "Neha",
-    "department": "MBA"
-  },
-  "U108": {
-    "name": "Arjun",
-    "department": "B.Tech IT"
-  }
+    "U104": {
+        "name": "Suresh",
+        "department": "B.Com"
+    },
+    "U105": {
+        "name": "Pooja",
+        "department": "B.Sc Computer Science"
+    },
+    "U106": {
+        "name": "Ravi",
+        "department": "BCA"
+    },
+    "U107": {
+        "name": "Neha",
+        "department": "MBA"
+    },
+    "U108": {
+        "name": "Arjun",
+        "department": "B.Tech IT"
+    },
+    "U109": {
+        "name": "kartus",
+        "department": "b.com gen"
+    },
+    "U110": {
+        "name": "Billy",
+        "department": "b.com hon"
+    }
 }

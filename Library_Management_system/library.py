@@ -27,7 +27,7 @@ class LibrarySystem:
         
     def __save(self,filename,data):
         with open(filename,"w") as file:
-            json.dump(file,data,indent=4)
+            json.dump(data,file,indent=4)
 
 #----------------About Books--------------#
     def add_book(self,bid,title,author,copies):
@@ -37,7 +37,7 @@ class LibrarySystem:
             self.__books[bid]={
                 "title":title,
                 "author":author,
-                "copies":copies
+                "copies":int(copies)
             }
             self.__save(self.__book_file,self.__books)
             return "Book Added Successfully"
@@ -50,7 +50,8 @@ class LibrarySystem:
             for b in self.__issued:
                 if b ==bid:
                     issued_count +=1
-            available = data["copies"]-issued_count 
+            copies = int(data["copies"])# as the copiess are in string format so convetred it into integer to perform arthemetic operation
+            available = copies-issued_count 
             print(bid,data["title"],data["author"],"Available",available)
     
     def view_available_books(self):
@@ -59,7 +60,8 @@ class LibrarySystem:
             for b in self.__issued:
                 if b ==bid:
                     issued_count+=1
-            if data["copies"]>issued_count:
+            copies = int(data["copies"])
+            if copies>issued_count:
                 print(bid,data["title"],data["author"])
     
     ############## user   ##############
@@ -70,8 +72,8 @@ class LibrarySystem:
 
         else:
             self.__users[uid]={
-                "name":name,
-                "department":department
+                "name":name.title().strip(),
+                "department":department.title().strip()
             }
             self.__save(self.__user_file,self.__users)
             return "Registered Student!!!!"
@@ -106,7 +108,7 @@ class LibrarySystem:
                 issued_count+=1
         #if the book is not available  in library
         data= self.__books
-        if issued_count>= data[bid]["copies"]:
+        if issued_count>= int(data[bid]["copies"]):
             return "No copies available"
         # if the book is available
         # JSON cannot store date objects → must convert to string.
@@ -135,10 +137,11 @@ class LibrarySystem:
         found = False
         ## Check the used id in issued_ data and if available in list printing the book details
         for bid,data in self.__issued.items():
-            if data["userd_id"]== uid:
+            if data["user_id"]== uid:
                 print(
-                    bid,
-                    self.__books[bid]["title"],"Issued on",data["issued_date"]
+                    "Book ID: ",bid,
+                    "Title:",self.__books[bid]["title"],
+                    "Issued on",data["issue_date"]
                 )
                 found =True
         if not found:
@@ -154,6 +157,6 @@ class LibrarySystem:
                 print("Book Id: ",bid)
                 print("Title:" ,self.__books[bid]["title"])
                 print("Author",self.__books[bid]["author"])
-                print("Issued To:",self.__users[uid]["name"])
+                print("Issued To:",self.__issued[bid]["user_id"],)
                 print("Issued on: ",data["issue_date"])
                 print("="*40)

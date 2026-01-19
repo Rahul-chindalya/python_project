@@ -1,52 +1,62 @@
 {
-  "B101": {
-    "title": "Python Programming",
-    "author": "Guido",
-    "copies": 5
-  },
-  "B102": {
-    "title": "Data Science",
-    "author": "Smith",
-    "copies": 3
-  },
-  "B103": {
-    "title": "Django Web Development",
-    "author": "Adrian",
-    "copies": 4
-  },
-  "B104": {
-    "title": "Machine Learning Basics",
-    "author": "Andrew",
-    "copies": 6
-  },
-  "B105": {
-    "title": "SQL for Beginners",
-    "author": "Alan",
-    "copies": 7
-  },
-  "B106": {
-    "title": "Java Programming",
-    "author": "James",
-    "copies": 5
-  },
-  "B107": {
-    "title": "Web Development with HTML & CSS",
-    "author": "Mark",
-    "copies": 8
-  },
-  "B108": {
-    "title": "JavaScript Essentials",
-    "author": "Brendan",
-    "copies": 6
-  },
-  "B109": {
-    "title": "Artificial Intelligence",
-    "author": "Russell",
-    "copies": 4
-  },
-  "B110": {
-    "title": "Cloud Computing",
-    "author": "Tom",
-    "copies": 3
-  }
+    "B101": {
+        "title": "Python Programming",
+        "author": "Guido",
+        "copies": 5
+    },
+    "B102": {
+        "title": "Data Science",
+        "author": "Smith",
+        "copies": 3
+    },
+    "B103": {
+        "title": "Django Web Development",
+        "author": "Adrian",
+        "copies": 4
+    },
+    "B104": {
+        "title": "Machine Learning Basics",
+        "author": "Andrew",
+        "copies": 6
+    },
+    "B105": {
+        "title": "SQL for Beginners",
+        "author": "Alan",
+        "copies": 7
+    },
+    "B106": {
+        "title": "Java Programming",
+        "author": "James",
+        "copies": 5
+    },
+    "B107": {
+        "title": "Web Development with HTML & CSS",
+        "author": "Mark",
+        "copies": 8
+    },
+    "B108": {
+        "title": "JavaScript Essentials",
+        "author": "Brendan",
+        "copies": 6
+    },
+    "B109": {
+        "title": "Artificial Intelligence",
+        "author": "Russell",
+        "copies": 4
+    },
+    "B110": {
+        "title": "Cloud Computing",
+        "author": "Tom",
+        "copies": 3
+    },
+    "B111": {
+        "title": "Python2",
+        "author": "Gudio2",
+        "copies": "4"
+    },
+    "B112": {
+        "title": "Cloud Computing 2",
+        "author": "Tom Cruse",
+        "copies": 3
+    }
 }

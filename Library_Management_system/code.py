@@ -30,34 +30,34 @@ class Admin(user):
 
             if admin_no == "1":
                 print(self.system.add_book(
-                    input(" Book ID: "),
-                    input("Title: "),
-                    input("Author Name:"),
-                    input("Copies: ")
+                    input(" Book ID: ").strip().title(),
+                    input("Title: ").strip().title(),
+                    input("Author Name:").strip().title(),
+                    int(input("Copies: "))
                 ))
             elif admin_no == "2":
                 self.system.view_books()
             elif admin_no == "3":
                 print(self.system.add_user(
-                    input("User Id: "),
-                    input("Name: "),
-                    input("Department: ")
+                    input("User Id: ").strip().title(),
+                    input("Name: ").strip().title(),
+                    input("Department: ").strip().title()
                 ))        
             elif admin_no == "4":
                 print(self.system.view_user(
-                    input("USer Id: ")
+                    input("USer Id: ").strip().title()
                 ))
             elif admin_no == "5":
                 self.system.view_users()
             elif admin_no == "6":
-                print(self.system.issued_book(
-                    input("User ID: "),
-                    input("Book Id: ")
+                print(self.system.issue_book(
+                    input("User ID: ").strip().title(),
+                    input("Book Id: ").strip().title()
                 ))
             elif admin_no == "7":
                 print(self.system.return_book(
-                    input("User ID: "),
-                    input("Book Id: ")
+                    input("User ID: ").strip().title(),
+                    input("Book Id: ").strip().title()
                 ))
             elif admin_no == "8":
                 self.system.issued_report()
@@ -82,17 +82,17 @@ class StudentMenu(user):
                 self.system.view_available_books()
             elif std_choice =="2":
                 print(self.system.issue_book(
-                    input("User Id: "),
-                    input("Book Id: ")
+                    input("User Id: ").strip().title(),
+                    input("Book Id: ").strip().title()
                 ))
             elif std_choice =="3":
                 print(self.system.return_book(
-                    input("User Id: "),
-                    input("Book Id: ")
+                    input("User Id: ").strip().title(),
+                    input("Book Id: ").strip().title()
                 ))
             elif std_choice =="4":
                 print(self.system.my_books(
-                    input("User Id: ")
+                    input("User Id: ").strip().title()
                 ))
             elif std_choice =="5":
                 break
