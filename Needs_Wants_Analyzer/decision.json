@@ -1,0 +1,12 @@
+{
+    "pencil": {
+        "price": 50,
+        "pocket_money": 100,
+        "decision": "Can buy using pocket money"
+    },
+    "school shoes": {
+        "price": 500,
+        "pocket_money": 100,
+        "decision": "Ask Parents"
+    }
+}
